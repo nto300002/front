@@ -12,7 +12,7 @@ export default function Home() {
 
   const fetchTests = async () => {
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tests`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}tests`);
       if (!response.ok) {
         throw new Error('データの取得に失敗しました');
       }
