@@ -26,7 +26,7 @@ const Emotion = () => {
     fetchTests();
   }, []);
   return (
-    <div className="mt-12">
+    <div className="mt-40">
       <h1 className="text-2xl p-4 bg-white border-b-4 border-red-300">
         みんなの感情
       </h1>

@@ -21,7 +21,12 @@ export default function RootLayout({
         <Header />
         <main
           className="flex flex-col items-center p-24 bg-cover h-screen"
-          style={{ backgroundImage: 'url("bg-image.jpg")' }}
+          style={{
+            backgroundImage: 'url("bg-image.jpg")',
+            backgroundAttachment: 'fixed',
+            backgroundSize: 'cover',
+            minHeight: '100vh',
+          }}
         >
           {children}
         </main>
