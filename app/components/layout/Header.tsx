@@ -10,7 +10,7 @@ const Header = () => {
   const styleHover = 'hover:text-blue-500 mb-3';
   return (
     <>
-      <div className="bg-red-200 p-6 flex justify-end">
+      <div className="fixed top-0 left-0 w-full bg-red-200 p-6 flex justify-end">
         <div className="hover:cursor-pointer">
           <Link href="/">
             <Image src="/title_top.png" alt="title" width={200} height={100} />
