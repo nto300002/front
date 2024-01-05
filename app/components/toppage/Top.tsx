@@ -6,11 +6,11 @@ import Emotion from '../emotions/Emotion';
 
 const Top = () => {
   return (
-    <div className="items-center">
-      <p className="text-xl">
+    <div>
+      <p className="text-xl mt-6">
         このアプリはあなたの感情を名付け、可視化し、深掘りすることであなたの傷を癒やすお手伝いができます。
       </p>
-      <p className="text-xl mt-6 mb-12">
+      <p className="text-xl mt-6 mb-6">
         あなたが再び、前を向いて人生を歩けますように。
       </p>
       <div className="flex justify-end p-6 hover:bg-gray-50 transition duration-300 ease-in-out shadow-md">
