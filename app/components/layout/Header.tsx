@@ -10,12 +10,14 @@ const Header = () => {
   const styleHover = 'hover:text-blue-500 mb-3';
   return (
     <>
-      <div className="bg-yellow-400 p-6 flex justify-end">
-        <Link href="/">
-          <Image src="/title_logo.png" alt="title" width={200} height={100} />
-        </Link>
+      <div className="bg-red-200 p-6 flex justify-end">
+        <div className="hover:cursor-pointer">
+          <Link href="/">
+            <Image src="/title_top.png" alt="title" width={200} height={100} />
+          </Link>
+        </div>
         <p
-          className="text-white text-xl ml-auto mt-3 mr-3"
+          className="text-white text-xl ml-auto mt-3 mr-3 hover:animate-bounce hover:cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
           ▼
@@ -24,13 +26,15 @@ const Header = () => {
           <Avatar />
         ) : (
           <>
-            <p className="text-white text-xl mt-3 ml-3 mr-3">Menu</p>
+            <p
+              className="text-white text-xl mt-3 ml-3 mr-3 hover:cursor-pointer"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              Menu
+            </p>
           </>
         )}
       </div>
-      <p onClick={() => setLogin(!isLoggedIn)} className="pt-5">
-        {isLoggedIn ? 'Login' : 'Logout'}
-      </p>
       {isOpen && (
         <div className="origin-top-right absolute text-gray-800 p-6 right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 text-left">
           {isLoggedIn ? (
@@ -46,12 +50,15 @@ const Header = () => {
               <Link href="/emotions">
                 <p className={styleHover}>みんなの感情</p>
               </Link>
-              <Link href="/emotion/new">
+              <Link href="/emotions/new">
                 <p className={styleHover}>感情を吐き出す</p>
               </Link>
               <Link href="/profile">
                 <p className={styleHover}>プロフィール</p>
               </Link>
+              <p onClick={() => setLogin(!isLoggedIn)} className="pt-5">
+                {isLoggedIn ? 'Login' : 'Logout'}
+              </p>
             </div>
           ) : (
             // Logged-in user menu options here
@@ -65,9 +72,12 @@ const Header = () => {
               <Link href="/emotions">
                 <p className={styleHover}>みんなの感情</p>
               </Link>
-              <Link href="/emotion/new">
+              <Link href="/emotions/new">
                 <p className={styleHover}>感情を吐き出す</p>
               </Link>
+              <p onClick={() => setLogin(!isLoggedIn)} className="pt-5">
+                {isLoggedIn ? 'Login' : 'Logout'}
+              </p>
             </div>
             // Guest menu options here
           )}
