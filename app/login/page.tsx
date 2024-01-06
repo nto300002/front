@@ -8,7 +8,6 @@ const Login = () => {
       <MainContent>
         <LoginForm />
       </MainContent>
-      ;
     </>
   );
 };
