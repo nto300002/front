@@ -5,7 +5,7 @@ interface AIInputProps {
   name: string;
 }
 
-const EmotionFormInputAIImage: React.FC<AIInputProps> = ({ id, name }) => {
+const EmotionFormInputAIImage: React.FC<AIInputProps> = () => {
   return (
     <div className="text-base">
       <EmotionFormInput id="image" name="image">
