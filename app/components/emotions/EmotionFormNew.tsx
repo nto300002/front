@@ -5,7 +5,6 @@ import EmotionFormInput from './EmotionFormInput';
 import EmotionFormTextArea from './EmotionFormTextArea';
 import EmotionFormBodyParts from './EmotionFormBodyParts';
 import EmotionFormInputFile from './EmotionFormInputFile';
-import EmotionFormInputAIImage from './EmotionFormInputAIImage';
 
 const EmotionFormNew = () => {
   const [isAiInput, setIsAiInput] = useState(false);
@@ -37,7 +36,13 @@ const EmotionFormNew = () => {
           </>
         ) : (
           <div className="text-base">
-            <EmotionFormInputAIImage id="image" name="image" />
+            <p className="mr-5">AIによる画像生成</p>
+            <input
+              type="text"
+              id="image"
+              name="image"
+              className="border-gray-400 border-b-2 w-full"
+            />
             <span
               className="hover:text-blue-300"
               onClick={() => setIsAiInput(!isAiInput)}
