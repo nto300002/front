@@ -1,11 +1,11 @@
 import EmotionFormInput from './EmotionFormInput';
 
-interface AiInputProps {
+interface AIInputProps {
   id: string;
   name: string;
 }
 
-const EmotionFormInputAiImage: React.FC<AiInputProps> = ({ id, name }) => {
+const EmotionFormInputAIImage: React.FC<AIInputProps> = ({ id, name }) => {
   return (
     <div className="text-base">
       <EmotionFormInput id="image" name="image">
@@ -14,4 +14,4 @@ const EmotionFormInputAiImage: React.FC<AiInputProps> = ({ id, name }) => {
     </div>
   );
 };
-export default EmotionFormInputAiImage;
+export default EmotionFormInputAIImage;
