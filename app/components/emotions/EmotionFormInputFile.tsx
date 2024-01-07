@@ -12,7 +12,7 @@ const EmotionFormInputFile: React.FC<InputProps> = ({ children, id, name }) => {
         type="file"
         id={id}
         name={name}
-        className="border-gray-400 border-b-2 rounded-lg"
+        className="border-gray-400 border-b-2"
       />
       <div className="mb-5" />
     </div>
