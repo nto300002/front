@@ -12,7 +12,7 @@ const Input: React.FC<InputProps> = ({ children, id, name }) => {
         type="text"
         id={id}
         name={name}
-        className="bg-gray-200 rounded-lg"
+        className="border-gray-400 border-2 rounded-lg"
       />
       <div className="mb-5" />
     </div>
