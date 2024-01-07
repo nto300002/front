@@ -1,7 +1,13 @@
+import EmotionFormNew from '@/app/components/emotions/EmotionFormNew';
+import MainContent from '@/app/components/layout/MainContent';
 import React from 'react';
 
 const EmotionsNewPost = () => {
-  return <div>EmotionsNewPost</div>;
+  return (
+    <MainContent>
+      <EmotionFormNew />
+    </MainContent>
+  );
 };
 
 export default EmotionsNewPost;
