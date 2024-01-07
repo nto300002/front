@@ -37,6 +37,12 @@ const Header = () => {
       </div>
       {isOpen && (
         <div className="origin-top-right absolute text-gray-800 p-6 right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 text-left">
+          <button
+            className="bg-red-500 text-white text-xs p-1 pl-2 pr-2 mb-2 rounded-md"
+            onClick={() => setIsOpen(false)}
+          >
+            X
+          </button>
           {isLoggedIn ? (
             <div
               className="py-1"

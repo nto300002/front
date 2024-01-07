@@ -1,12 +1,18 @@
+'use client';
+import React, { useEffect, useState } from 'react';
+
 type Test = {
   id: number;
   title: string;
 };
 
-import React, { useEffect, useState } from 'react';
-
 const Emotion = () => {
   const [tests, setTests] = useState<Test[]>([]);
+
+  const [isClicked, setIsClicked] = useState(false);
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+  };
 
   const fetchTests = async () => {
     try {
@@ -21,12 +27,30 @@ const Emotion = () => {
       console.error(error);
     }
   };
-
   useEffect(() => {
     fetchTests();
   }, []);
+
   return (
-    <div className="mt-40">
+    <div>
+      <div className="flex text-white">
+        <p
+          className={`pl-3 pr-3 cursor-pointer ${
+            isClicked ? 'bg-red-400 shadow-xl text-lg' : 'bg-red-700'
+          }`}
+          onClick={handleClick}
+        >
+          自分
+        </p>
+        <p
+          className={`pl-3 pr-3 cursor-pointer ${
+            isClicked ? 'bg-red-700' : 'bg-red-400 shadow-xl text-lg'
+          }`}
+          onClick={handleClick}
+        >
+          他のユーザー
+        </p>
+      </div>
       <h1 className="text-2xl p-4 bg-white border-b-4 border-red-300">
         みんなの感情
       </h1>

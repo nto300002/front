@@ -24,6 +24,7 @@ const Top = () => {
           </Link>
         </div>
       </div>
+      <p className="mt-36" />
       <Emotion />
     </div>
   );
