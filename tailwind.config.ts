@@ -24,7 +24,7 @@ const config: Config = {
     iconsPlugin({
       // 利用したい icon collection を利用する
       // https://icones.js.org/
-      collections: getIconCollections(["prime"]),
+      collections: getIconCollections(["prime", "solar"]),
     }),
   ],
 }

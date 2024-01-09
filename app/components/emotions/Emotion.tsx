@@ -1,5 +1,12 @@
 'use client';
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
+import LikeButton from '../layout/LikeButton';
+import Link from 'next/link';
+import EditButton from '../layout/EditButton';
+import DeleteButton from '../layout/DeleteButton';
+import { fetchTests } from '@/app/api/emotions';
 
 type Test = {
   id: number;
@@ -14,21 +21,16 @@ const Emotion = () => {
     setIsClicked(!isClicked);
   };
 
-  const fetchTests = async () => {
-    try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tests`);
-      if (!response.ok) {
-        throw new Error('データの取得に失敗しました');
-      }
-      const data = await response.json();
-      setTests(data);
-      console.log(tests);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  const params = useParams();
+  console.log(params.id);
+
   useEffect(() => {
-    fetchTests();
+    const fetchData = async () => {
+      const testsData = await fetchTests();
+      setTests(testsData);
+    };
+
+    fetchData();
   }, []);
 
   return (
@@ -57,10 +59,29 @@ const Emotion = () => {
       <ul className="flex flex-wrap">
         {tests.map((test) => (
           <li
-            className="bg-red-50 mt-6 ml-20 w-40 h-48 rounded-2xl border-red-300 border-2 shadow-md"
+            className="bg-red-50 mt-6 ml-20 w-40 h-56 shadow-md"
             key={test.id}
           >
-            {test.title}
+            <Link href={`/emotions/${test.id}`}>
+              <Image
+                src="/sample.png"
+                alt="sample-image"
+                width={300}
+                height={200}
+              />
+              {test.title}
+            </Link>
+            <span className="text-right">
+              <LikeButton />
+            </span>
+            <div id="#own" className="group relative">
+              <div className="flex p-4 absolute top-5 left-24">
+                <Link href={`/emotions/${test.id}/edit`}>
+                  <EditButton />
+                </Link>
+                <DeleteButton />
+              </div>
+            </div>
           </li>
         ))}
       </ul>

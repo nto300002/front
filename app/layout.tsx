@@ -20,15 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <main
-          className="flex flex-col items-center p-24 bg-cover h-screen"
-          style={{
-            backgroundImage: 'url("bg-image.jpg")',
-            backgroundAttachment: 'fixed',
-            backgroundSize: 'cover',
-            minHeight: '100vh',
-          }}
-        >
+        <main className="flex flex-col items-center p-24 bg-gradient-to-b from-red-50 to-red-200 w-screen h-screen overflow-y-auto">
           {children}
         </main>
         <Footer />
