@@ -20,18 +20,6 @@ const EmotionForm = () => {
       </EmotionFormTextArea>
       <EmotionFormBodyParts />
       {isAiInput ? (
-        <>
-          <EmotionFormInputFile id="image" name="image">
-            イメージ画像
-          </EmotionFormInputFile>
-          <span
-            className="hover:text-blue-300"
-            onClick={() => setIsAiInput(!isAiInput)}
-          >
-            AIによる画像生成▶
-          </span>
-        </>
-      ) : (
         <div className="text-base">
           <p className="mr-5">AIによる画像生成</p>
           <input
@@ -47,6 +35,18 @@ const EmotionForm = () => {
             画像を投稿する▶
           </span>
         </div>
+      ) : (
+        <>
+          <EmotionFormInputFile id="image" name="image">
+            イメージ画像
+          </EmotionFormInputFile>
+          <span
+            className="hover:text-blue-300"
+            onClick={() => setIsAiInput(!isAiInput)}
+          >
+            AIによる画像生成▶
+          </span>
+        </>
       )}
     </div>
   );

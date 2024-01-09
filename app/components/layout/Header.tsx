@@ -10,14 +10,21 @@ const Header = () => {
   const styleHover = 'hover:text-blue-500 mb-3';
   return (
     <>
-      <div className="fixed top-0 left-0 w-full bg-red-200 p-6 flex justify-end">
+      <div
+        className="fixed top-0 left-0 w-full bg-red-200 p-6 flex justify-end"
+        style={{
+          backgroundImage: 'url("bg-image.jpg")',
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
+        }}
+      >
         <div className="hover:cursor-pointer">
           <Link href="/">
             <Image src="/title_top.png" alt="title" width={200} height={100} />
           </Link>
         </div>
         <p
-          className="text-white text-xl ml-auto mt-3 mr-3 hover:animate-bounce hover:cursor-pointer"
+          className="text-gray-500 text-xl ml-auto mt-3 mr-3 hover:animate-bounce hover:cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
           ▼
@@ -27,7 +34,7 @@ const Header = () => {
         ) : (
           <>
             <p
-              className="text-white text-xl mt-3 ml-3 mr-3 hover:cursor-pointer"
+              className="text-gray-500 text-xl mt-3 ml-3 mr-3 hover:cursor-pointer"
               onClick={() => setIsOpen(!isOpen)}
             >
               Menu
