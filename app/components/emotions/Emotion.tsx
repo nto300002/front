@@ -6,7 +6,7 @@ import LikeButton from '../layout/LikeButton';
 import Link from 'next/link';
 import EditButton from '../layout/EditButton';
 import DeleteButton from '../layout/DeleteButton';
-import { fetchTests } from '@/app/api/Emotions';
+import { fetchTests } from '@/app/api/emotions';
 
 type Test = {
   id: number;
