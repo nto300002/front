@@ -1,7 +1,7 @@
 import React from 'react';
 import MainContent from '../components/layout/MainContent';
-import LoginForm from '../components/login/LoginForm';
-import { LoginButton, LogoutButton } from '../components/layout/GoogleAuth';
+import LoginForm from '../components/pages/login/LoginForm';
+import { LoginButton, LogoutButton } from '../components/auth/GoogleAuth';
 import { getServerSession } from 'next-auth';
 import { options } from '../Authoptions';
 import Provider from '../components/auth/Provider';

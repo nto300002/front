@@ -1,4 +1,4 @@
-import SubmitButton from '../layout/SubmitButton';
+import SubmitButton from '@/app/components/layout/SubmitButton';
 import EmotionForm from './EmotionForm';
 
 const EmotionFormEdit = () => {

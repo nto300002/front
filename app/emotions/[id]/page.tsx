@@ -3,8 +3,8 @@ import DeleteButton from '@/app/components/layout/DeleteButton';
 import EditButton from '@/app/components/layout/EditButton';
 import MainContent from '@/app/components/layout/MainContent';
 import SubmitButton from '@/app/components/layout/SubmitButton';
-import FiveWs from '@/app/components/questions/FiveWs';
-import QuestionForm from '@/app/components/questions/QuestionForm';
+import FiveWs from '@/app/components/pages/questions/FiveWs';
+import QuestionForm from '@/app/components/pages/questions/QuestionForm';
 import Link from 'next/link';
 import { useState } from 'react';
 
