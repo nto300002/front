@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Navigation from '../../layout/Navigation';
+import Link from 'next/link';
 
 const Top = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -69,9 +70,11 @@ const Top = () => {
       <p className="mb-12" />
       <br />
       <Navigation content="価値の的">
-        <span className="text-blue-400 hover:cursor-pointer">
-          エクササイズはこちら
-        </span>
+        <Link href="/values">
+          <span className="text-blue-400 hover:cursor-pointer">
+            エクササイズはこちら
+          </span>
+        </Link>
         <p>価値とは</p>
         <br />
         <ul className="mb-6">
@@ -124,10 +127,12 @@ const Top = () => {
         </p>
       </Navigation>
       <br />
-      <Navigation content="問題と価値">
-        <span className="text-blue-400 hover:cursor-pointer">
-          エクササイズはこちら
-        </span>
+      <Navigation content="問題の深掘り">
+        <Link href="/problems">
+          <span className="text-blue-400 hover:cursor-pointer">
+            エクササイズはこちら
+          </span>
+        </Link>
         <h1>
           苦悩を減らし、豊かな生活を送るために、問題のある思考と価値を知ることが重要です。
         </h1>
@@ -142,9 +147,11 @@ const Top = () => {
       </Navigation>
       <br />
       <Navigation content="活力vs苦悩">
-        <span className="text-blue-400 hover:cursor-pointer">
-          エクササイズはこちら
-        </span>
+        <Link href="gains">
+          <span className="text-blue-400 hover:cursor-pointer">
+            エクササイズはこちら
+          </span>
+        </Link>
         <p>
           あなたにとっての
           <span className="border-b-4 border-red-300">
@@ -173,9 +180,11 @@ const Top = () => {
       </Navigation>
       <br />
       <Navigation content="点(DOTS)を結ぶ">
-        <span className="text-blue-400 hover:cursor-pointer">
-          エクササイズはこちら
-        </span>
+        <Link href="/dots">
+          <span className="text-blue-400 hover:cursor-pointer">
+            エクササイズはこちら
+          </span>
+        </Link>
         <h1>DOTSとはそれぞれの頭文字を取ったものです。</h1>
         <br />
         <ul>
@@ -203,9 +212,11 @@ const Top = () => {
       </Navigation>
       <br />
       <Navigation content="心をオープンにするエクササイズ">
-        <span className="text-blue-400 hover:cursor-pointer">
-          エクササイズはこちら
-        </span>
+        <Link href="emotions">
+          <span className="text-blue-400 hover:cursor-pointer">
+            エクササイズはこちら
+          </span>
+        </Link>
         <p>
           上記で扱ってきた、自分にとって厄介な思考とは、ここでは
           <span className="text-red-500">マインド</span>と呼びます。
