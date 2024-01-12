@@ -1,11 +1,26 @@
 import React from 'react';
 import MainContent from '../components/layout/MainContent';
-import LoginForm from '../components/login/LoginForm';
+import LoginForm from '../components/pages/login/LoginForm';
+import { LoginButton, LogoutButton } from '../components/auth/GoogleAuth';
+import { getServerSession } from 'next-auth';
+import { options } from '../Authoptions';
+import Provider from '../components/auth/Provider';
 
-const Login = () => {
+const Login = async () => {
+  const session = await getServerSession(options);
   return (
     <MainContent>
-      <LoginForm />
+      {session?.user ? (
+        <>
+          <Provider>
+            <h1>ようこそ, {session.user && session.user.email}さん</h1>
+          </Provider>
+
+          <LogoutButton />
+        </>
+      ) : (
+        <LoginButton />
+      )}
     </MainContent>
   );
 };

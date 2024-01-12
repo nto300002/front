@@ -1,6 +1,6 @@
 import React from 'react';
 import MainContent from '../components/layout/MainContent';
-import Emotion from '../components/emotions/Emotion';
+import Emotion from '../components/pages/emotions/Emotion';
 import SearchInput from '../components/layout/SearchInput';
 import LikeButton from '../components/layout/LikeButton';
 
