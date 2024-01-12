@@ -1,20 +1,20 @@
 import React from 'react';
-import Input from '../../layout/InputForm';
+import { InputForm } from '../../layout/InputForm';
 import SubmitButton from '../../layout/SubmitButton';
 
 const LoginForm = () => {
   return (
     <div className="text-center">
       <h1 className="text-3xl mb-5">ログイン</h1>
-      <Input id="email" name="email">
+      <InputForm id="email" name="email" type="text">
         メールアドレス
-      </Input>
-      <Input id="password" name="password">
+      </InputForm>
+      <InputForm id="password" name="password" type="text">
         パスワード
-      </Input>
-      <Input id="password_confirm" name="password_confirm">
+      </InputForm>
+      <InputForm id="password_confirm" name="password_confirm" type="text">
         パスワード確認
-      </Input>
+      </InputForm>
       <SubmitButton>ログイン</SubmitButton>
     </div>
   );
