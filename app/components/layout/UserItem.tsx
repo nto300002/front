@@ -22,7 +22,7 @@ const UserItem = async () => {
               </Link>
             </li>
             <li className="opacity-0">| | |</li>
-            <li className="border-2 border-gray-600 p-2 rounded-md text-md hover:bg-gray-300 text-gray-800">
+            <li className="">
               <LogoutButton />
             </li>
           </ul>
