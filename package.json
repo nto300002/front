@@ -10,10 +10,14 @@
   },
   "dependencies": {
     "@egoist/tailwindcss-icons": "^1.7.1",
+    "@types/faker": "^6.6.9",
+    "chart.js": "^4.4.1",
+    "faker": "^6.6.6",
     "firebase": "^10.7.1",
     "next": "14.0.4",
     "next-auth": "^4.24.5",
     "react": "^18",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18"
   },
   "devDependencies": {

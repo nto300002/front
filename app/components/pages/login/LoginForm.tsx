@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../../layout/Input';
+import Input from '../../layout/InputForm';
 import SubmitButton from '../../layout/SubmitButton';
 
 const LoginForm = () => {
