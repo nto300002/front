@@ -1,6 +1,6 @@
 import React from 'react';
-import TextArea from '../layout/TextArea';
-import SubmitButton from '../layout/SubmitButton';
+import TextArea from '../../layout/TextArea';
+import SubmitButton from '../../layout/SubmitButton';
 import FiveWs from './FiveWs';
 
 const QuestionForm = () => {

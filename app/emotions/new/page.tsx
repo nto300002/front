@@ -1,4 +1,4 @@
-import EmotionFormNew from '@/app/components/emotions/EmotionFormNew';
+import EmotionFormNew from '@/app/components/pages/emotions/EmotionFormNew';
 import MainContent from '@/app/components/layout/MainContent';
 import React from 'react';
 

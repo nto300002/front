@@ -2,10 +2,10 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
-import LikeButton from '../layout/LikeButton';
+import LikeButton from '@/app/components/layout/LikeButton';
 import Link from 'next/link';
-import EditButton from '../layout/EditButton';
-import DeleteButton from '../layout/DeleteButton';
+import EditButton from '@/app/components/layout/EditButton';
+import DeleteButton from '@/app/components/layout/DeleteButton';
 import { fetchTests } from '@/app/api/emotions';
 
 type Test = {

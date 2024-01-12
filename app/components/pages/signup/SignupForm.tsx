@@ -1,6 +1,6 @@
 import React from 'react';
-import Input from '../layout/Input';
-import SubmitButton from '../layout/SubmitButton';
+import Input from '../../layout/Input';
+import SubmitButton from '../../layout/SubmitButton';
 
 const SignupForm = () => {
   return (
