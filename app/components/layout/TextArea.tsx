@@ -7,14 +7,13 @@ interface InputProps {
 
 const TextArea: React.FC<InputProps> = ({ children, id, name }) => {
   return (
-    <div className="text-xl">
-      <p className="mr-5">{children}</p>
+    <div className="text-md">
+      <p className="text-left">{children}</p>
       <textarea
         id={id}
         name={name}
-        className="border-gray-400 border-2 rounded-md w-full h-32"
+        className="border-gray-400 border-b-2 w-full h-12"
       />
-      <div className="mb-5" />
     </div>
   );
 };
