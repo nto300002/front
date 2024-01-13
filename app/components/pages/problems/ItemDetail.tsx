@@ -1,9 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 
-const ItemList = () => {
+const ItemDetail = () => {
   const content = 'mb-4 text-gray-500';
-  const h2 = 'text-xl border-b-2 text-gray-800';
+  const h2 = 'text-md border-b-2 text-gray-800';
   const [expanded, setExpanded] = useState(false);
 
   const toggleContent = () => {
@@ -12,7 +12,7 @@ const ItemList = () => {
   return (
     <div>
       {' '}
-      <ul className="bg-white rounded-md p-4">
+      <ul className="bg-white rounded-md p-2">
         <div
           className={`overflow-hidden transition-all duration-300 ${
             expanded ? 'h-auto' : 'h-36'
@@ -62,4 +62,4 @@ const ItemList = () => {
   );
 };
 
-export default ItemList;
+export default ItemDetail;
