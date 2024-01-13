@@ -21,7 +21,7 @@ export const InputForm: React.FC<InputProps> = ({
 }) => {
   return (
     <div className="text-md">
-      <p className="mr-5">{children}</p>
+      <p className="text-left">{children}</p>
       <input
         type={type}
         id={id}
@@ -41,7 +41,7 @@ export const InputRangeForm: React.FC<InputRangeProps> = ({
 }) => {
   return (
     <div className="text-md">
-      <p className="mr-5">{children}</p>
+      <p className="text-left">{children}</p>
       <input
         type="range"
         id={id}
