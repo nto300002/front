@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 
-const ItemList = () => {
+const ItemListDots = () => {
   const content = 'mb-4 text-gray-500';
   const h2 = 'text-xl border-b-2 text-gray-800';
   const [expanded, setExpanded] = useState(false);
@@ -19,37 +19,34 @@ const ItemList = () => {
           }`}
         >
           <li>
-            <h2 className={h2}>今抱えている問題</h2>
+            <h2 className={h2}>気持ち、感覚、衝動</h2>
           </li>
-          <li className={content}>problem</li>
+          <li className={content}>feeling</li>
           <li>
-            <h2 className={h2}>それが与えている影響</h2>
+            <h2 className={h2}>マインド</h2>
           </li>
-          <li className={content}>affect</li>
+          <li className={content}>mind</li>
         </div>
         {expanded && (
           <>
             <li>
-              <h2 className={h2}>思考への没入</h2>
+              <h2 className={h2}>気を紛らす(Distraction)</h2>
+            </li>
+            <li className={content}>distraction</li>
+            <li>
+              <h2 className={h2}>離れる</h2>
+            </li>
+            <li className={content}>opting_out</li>
+            <li>
+              <h2 className={h2}>考える</h2>
             </li>
             <li className={content}>thinking</li>
             <li>
-              <h2 className={h2}>活力を奪う行為</h2>
+              <h2 className={h2}>物質依存などの依存</h2>
             </li>
-            <li className={content}>pointless_act</li>
-            <li>
-              <h2 className={h2}>感情との戦い</h2>
-            </li>
-            <li className={content}>resistance</li>
-            <li>
-              <h2 className={h2}>困難からの回避</h2>
-            </li>
-            <li className={content}>avoidance</li>
+            <li className={content}>substances</li>
           </>
         )}
-        <p className="text-blue-400 text-right text-sm">
-          DOTSを結ぶエクササイズへ
-        </p>
         <span className="text-blue-400">{expanded ? '' : '...'}</span>
       </ul>
       <span
@@ -62,4 +59,4 @@ const ItemList = () => {
   );
 };
 
-export default ItemList;
+export default ItemListDots;
