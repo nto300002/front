@@ -20,7 +20,7 @@ const Emotions = () => {
       </Navigation>
       <div className="mt-12">
         <Navigation content="入力フォームを表示する">
-          <EmotionForm />
+          <EmotionForm>回答する</EmotionForm>
         </Navigation>
       </div>
       <ItemList />

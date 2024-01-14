@@ -6,7 +6,11 @@ import TextArea from '../../layout/TextArea';
 import SubmitButton from '../../layout/SubmitButton';
 import Image from 'next/image';
 
-const EmotionForm = () => {
+interface FormType {
+  children: React.ReactNode;
+}
+
+const EmotionForm: React.FC<FormType> = ({ children }) => {
   const [isAiInput, setIsAiInput] = useState(false);
   return (
     <div className="text-gray-500">
@@ -67,7 +71,7 @@ const EmotionForm = () => {
         </>
       )}
       <p className="mb-6" />
-      <SubmitButton>回答する</SubmitButton>
+      <SubmitButton>{children}</SubmitButton>
     </div>
   );
 };
