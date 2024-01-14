@@ -1,14 +1,14 @@
 import React from 'react';
 import ProblemForm from '../components/pages/problems/ProblemForm';
-import HiddenItem from '../components/layout/HiddenItem';
+import Navigation from '../components/layout/Navigation';
 import ProblemsItem from '../components/pages/problems/ProblemItem';
 
 const Problem = () => {
   return (
     <div className="w-1/2 mt-5">
-      <HiddenItem title="入力フォームを表示する">
+      <Navigation content="問題の深掘り">
         <ProblemForm />
-      </HiddenItem>
+      </Navigation>
       <ProblemsItem />
     </div>
   );

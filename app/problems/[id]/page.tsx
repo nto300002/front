@@ -1,4 +1,4 @@
-import HiddenItem from '@/app/components/layout/HiddenItem';
+import Navigation from '@/app/components/layout/Navigation';
 import DotsForm from '@/app/components/pages/dots/DotsForm';
 import ItemListDots from '@/app/components/pages/dots/ItemList';
 import ItemDetail from '@/app/components/pages/problems/ItemDetail';
@@ -10,9 +10,9 @@ const ProblemDetail = () => {
     <div>
       <ItemDetail />
       <p className="mt-4" />
-      <HiddenItem title="入力フォームを表示する">
+      <Navigation content="点(DOTS)を結ぶ">
         <DotsForm />
-      </HiddenItem>
+      </Navigation>
       <ItemListDots />
     </div>
   );

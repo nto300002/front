@@ -24,7 +24,7 @@ const ValueForm = () => {
         </InputForm>
         <SubmitButton>回答する</SubmitButton>
       </Navigation>
-      <div className="mt-6 border-2 border-gray-300 p-4 mb-4 text-center rounded-xl">
+      <div className="mt-6 border-2 border-gray-300 p-4 mb-4 text-center rounded-xl bg-white">
         <h1 className="text-xl text-gray-600 mb-2">
           <span className="border-b-2 border-gray-400 ">仕事</span>
         </h1>
@@ -51,38 +51,47 @@ const ValueForm = () => {
         </p>
       </div>
 
-      <h1 className="text-xl">価値観に沿った生活ができたかチェック</h1>
-      <InputRangeForm id="job_num" name="job_num" type="range" min={1} max={10}>
-        今日の評価：仕事
-      </InputRangeForm>
-      <InputRangeForm
-        id="human_relations_num"
-        name="human_relations_num"
-        type="range"
-        min={1}
-        max={10}
-      >
-        今日の評価：人間関係
-      </InputRangeForm>
-      <InputRangeForm
-        id="growth_num"
-        name="growth_num"
-        type="range"
-        min={1}
-        max={10}
-      >
-        今日の評価：成長・体調
-      </InputRangeForm>
-      <InputRangeForm
-        id="leisure_time_num"
-        name="leisure_time_num"
-        type="range"
-        min={1}
-        max={10}
-      >
-        今日の評価：余暇時間
-      </InputRangeForm>
-      <SubmitButton>回答する</SubmitButton>
+      <Navigation content="価値観に沿った生活ができたか">
+        <h1 className="text-xl">価値観に沿った生活ができたかチェック</h1>
+
+        <InputRangeForm
+          id="job_num"
+          name="job_num"
+          type="range"
+          min={1}
+          max={10}
+        >
+          今日の評価：仕事
+        </InputRangeForm>
+        <InputRangeForm
+          id="human_relations_num"
+          name="human_relations_num"
+          type="range"
+          min={1}
+          max={10}
+        >
+          今日の評価：人間関係
+        </InputRangeForm>
+        <InputRangeForm
+          id="growth_num"
+          name="growth_num"
+          type="range"
+          min={1}
+          max={10}
+        >
+          今日の評価：成長・体調
+        </InputRangeForm>
+        <InputRangeForm
+          id="leisure_time_num"
+          name="leisure_time_num"
+          type="range"
+          min={1}
+          max={10}
+        >
+          今日の評価：余暇時間
+        </InputRangeForm>
+        <SubmitButton>回答する</SubmitButton>
+      </Navigation>
     </div>
   );
 };

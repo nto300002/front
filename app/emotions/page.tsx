@@ -1,25 +1,30 @@
 import React from 'react';
-import MainContent from '../components/layout/MainContent';
-import Emotion from '../components/pages/emotions/Emotion';
-import SearchInput from '../components/layout/SearchInput';
-import LikeButton from '../components/layout/LikeButton';
+import DescriptionOfDefusion from '../components/pages/emotions/DescriptionOfDefusion';
+import OpenYourMindOfDefusion from '../components/pages/emotions/OpenYourMindOfDefusion';
+import Navigation from '../components/layout/Navigation';
+import EmotionForm from '../components/pages/emotions/EmotionForm';
+import SubmitButton from '../components/layout/SubmitButton';
+import ItemList from '../components/pages/emotions/ItemList';
 
 const Emotions = () => {
   return (
-    <MainContent>
-      <div className="text-right">
-        <LikeButton />
-        <div className="flex justify-end">
-          <SearchInput id="state_of_mind" name="state_of_mind">
-            感情の名前
-          </SearchInput>
-          <SearchInput id="five-ws" name="five-ws">
-            絞り込み検索
-          </SearchInput>
-        </div>
+    <div className="mt-12">
+      <h1 className="mb-6">
+        ここでは、脱フュージョンと、心をオープンにするエクササイズを行います。
+      </h1>
+      <Navigation content="脱フュージョンとは">
+        <DescriptionOfDefusion />
+      </Navigation>
+      <Navigation content="心をオープンにするエクササイズとは">
+        <OpenYourMindOfDefusion />
+      </Navigation>
+      <div className="mt-12">
+        <Navigation content="入力フォームを表示する">
+          <EmotionForm />
+        </Navigation>
       </div>
-      <Emotion />
-    </MainContent>
+      <ItemList />
+    </div>
   );
 };
 

@@ -17,7 +17,7 @@ const UserItem = async () => {
             </li>
             <li className="opacity-0">| | |</li>
             <li className="border-2 border-gray-600 p-2 rounded-md hover:bg-gray-300 text-md text-gray-800">
-              <Link href="/profile">
+              <Link href="/history">
                 <p>履歴</p>
               </Link>
             </li>
