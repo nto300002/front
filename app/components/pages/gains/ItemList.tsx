@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 
-const ItemList = () => {
+const GainItemList = () => {
   const content = 'mb-4 text-gray-500';
   const h2 = 'text-xl border-b-2 text-gray-800';
   const [expanded, setExpanded] = useState(false);
@@ -47,4 +47,4 @@ const ItemList = () => {
   );
 };
 
-export default ItemList;
+export default GainItemList;

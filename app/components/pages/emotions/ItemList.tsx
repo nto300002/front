@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 
-const ItemList = () => {
+const EmotionItemList = () => {
   const content = 'mb-4 text-gray-500';
   const h2 = 'text-xl mb-4 text-gray-800 border-b-2';
   const [expanded, setExpanded] = useState(false);
@@ -56,4 +56,4 @@ const ItemList = () => {
   );
 };
 
-export default ItemList;
+export default EmotionItemList;
