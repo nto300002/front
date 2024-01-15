@@ -1,13 +1,13 @@
 import React from 'react';
 import TextArea from '../../layout/TextArea';
 import SubmitButton from '../../layout/SubmitButton';
-import HiddenItem from '../../layout/HiddenItem';
+import Navigation from '../../layout/Navigation';
 
 const GainForm = () => {
   const style = 'text-gray-500 text-sm mb-2';
   return (
     <div>
-      <HiddenItem title="フォームを表示する">
+      <Navigation content="活力vs苦悩">
         <TextArea id="bad_idea" name="bad_idea">
           今日現れた嫌な考え
         </TextArea>
@@ -34,7 +34,7 @@ const GainForm = () => {
         </span>
         <p className="mb-5" />
         <SubmitButton>回答する</SubmitButton>
-      </HiddenItem>
+      </Navigation>
     </div>
   );
 };

@@ -1,11 +1,11 @@
-import EmotionFormNew from '@/app/components/pages/emotions/EmotionFormNew';
 import MainContent from '@/app/components/layout/MainContent';
 import React from 'react';
+import EmotionForm from '@/app/components/pages/emotions/EmotionForm';
 
 const EmotionsNewPost = () => {
   return (
     <MainContent>
-      <EmotionFormNew />
+      <EmotionForm>回答する</EmotionForm>
     </MainContent>
   );
 };
