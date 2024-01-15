@@ -17,11 +17,11 @@ const Navigation: React.FC<NavigationProps> = ({ content, children }) => {
         <NavigationContent content={content} />
         {isClicked ? (
           <>
-            <span className="ml-auto absolute top-7 right-10">-</span>
+            <span className="ml-auto absolute top-5 right-10 text-xl">-</span>
           </>
         ) : (
           <>
-            <span className="ml-auto absolute top-7 right-10">+</span>
+            <span className="ml-auto absolute top-5 right-10 text-xl">+</span>
           </>
         )}
       </div>

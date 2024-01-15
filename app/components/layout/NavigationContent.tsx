@@ -12,7 +12,7 @@ const NavigationContent: React.FC<NavigationContentProps> = ({ content }) => {
   return (
     <>
       <div
-        className="flex bg-red-200 justify-end p-6 hover:bg-gray-50 transition duration-300 ease-in-out shadow-md"
+        className="flex bg-red-200 justify-end p-3 hover:bg-gray-50 transition duration-300 ease-in-out shadow-md"
         onClick={() => setIsClicked(!isClicked)}
       >
         <div className="mr-auto mt-3 mr-6">
