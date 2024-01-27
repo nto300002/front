@@ -19,15 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <UserProvider>
-        <body className={inter.className}>
-          <Header />
-          <main className="flex flex-col items-center p-24 bg-gradient-to-b from-red-50 to-red-200 w-screen h-screen overflow-y-auto">
-            {children}
-          </main>
-          <Footer />
-        </body>
-      </UserProvider>
+      <body className={inter.className}>
+        <Header />
+        <main className="flex flex-col items-center p-24 bg-gradient-to-b from-red-50 to-red-200 w-screen h-screen overflow-y-auto">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }
