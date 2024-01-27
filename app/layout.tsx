@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import Header from './components/layout/Header';
 import '../globals.css';
 import Footer from './components/layout/Footer';
-import { UserProvider } from '@auth0/nextjs-auth0/client';
+import Auth0 from './components/auth/Auth0';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <UserProvider>
+      <Auth0>
         <body className={inter.className}>
           <Header />
           <main className="flex flex-col items-center p-24 bg-gradient-to-b from-red-50 to-red-200 w-screen h-screen overflow-y-auto">
@@ -27,7 +27,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </body>
-      </UserProvider>
+      </Auth0>
     </html>
   );
 }
