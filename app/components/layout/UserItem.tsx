@@ -3,12 +3,10 @@ import Link from 'next/link';
 import { useUser } from '@auth0/nextjs-auth0/client';
 import { getSession } from '@auth0/nextjs-auth0';
 
-const UserItem = async () => {
+const UserItem = () => {
   const style =
     'border-2 border-gray-600 p-2 rounded-md hover:bg-gray-300 text-md text-gray-800';
   // const { error, isLoading } = useUser();
-  const session = await getSession();
-  const user = session?.user;
 
   // if (isLoading) return <div>Loading...</div>;
   // if (error) return <div>{error.message}</div>;
@@ -22,24 +20,20 @@ const UserItem = async () => {
           </Link>
         </li>
         <li className="opacity-0">| | |</li>
-        {user ? (
-          <>
-            <li>{user?.name}</li>
-            <li className="opacity-0">| | |</li>
-            <li>
-              <a href="/api/auth/logout" className={style}>
-                ログアウト
-              </a>
-            </li>
-          </>
-        ) : (
-          <>
-            <a href="/api/auth/login" className={style}>
-              ログイン
+        <>
+          <li className="opacity-0">| | |</li>
+          <li>
+            <a href="/api/auth/logout" className={style}>
+              ログアウト
             </a>
-            <li className="opacity-0">| | |</li>
-          </>
-        )}
+          </li>
+        </>
+        <>
+          <a href="/api/auth/login" className={style}>
+            ログイン
+          </a>
+          <li className="opacity-0">| | |</li>
+        </>
       </ul>
     </div>
   );
